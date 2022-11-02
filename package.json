@@ -1,0 +1,52 @@
+{
+  "name": "coderhyh-project",
+  "private": true,
+  "version": "0.0.3",
+  "scripts": {
+    "serve": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "commit": "git add . && cz",
+    "lint": "eslint --ext .vue --ext .js --ext .ts src/ --fix",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^1.1.3",
+    "element-plus": "^2.2.18",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.23",
+    "pinia-plugin-persist": "^1.0.0",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/node": "^18.11.2",
+    "@types/nprogress": "^0.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "@vue/eslint-config-prettier": "6",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "commitizen": "4.2.4",
+    "cz-customizable": "6.3.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-vue": "^9.6.0",
+    "husky": "^8.0.0",
+    "less": "^4.1.3",
+    "postcss-preset-env": "^7.8.2",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.4",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.8",
+    "vite": "^3.1.0",
+    "vue-tsc": "^0.40.4"
+  }
+}
