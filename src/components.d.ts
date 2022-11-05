@@ -8,7 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Commons: typeof import('./components/commons/commons.vue')['default']
-    Cpn: typeof import('./components/contents/cpn.vue')['default']
+    Cpn: typeof import('./components/cpn.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElTree: typeof import('element-plus/es')['ElTree']

@@ -1,23 +1,10 @@
 <template>
   <div class="index">
-    <img src="https://coderhyh.top/logo.png" width="50" height="50" alt="" @click="click" />
+    <h1>Index</h1>
   </div>
 </template>
 
-<script setup lang="ts">
-import request from '~/service'
-
-interface R {
-  list: {
-    id: number
-    name: string
-  }[]
-}
-PointerEvent
-const click = async (event: MouseEvent) => {
-  console.log(event.clientX, 111)
-}
-</script>
+<script setup lang="ts"></script>
 
 <style lang="less" scoped>
 .index {
