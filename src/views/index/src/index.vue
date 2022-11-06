@@ -4,7 +4,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const name = '11'
+</script>
 
 <style lang="less" scoped>
 .index {
