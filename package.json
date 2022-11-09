@@ -9,7 +9,8 @@
     "commit": "git add . && cz",
     "lint": "eslint --ext .vue --ext .js --ext .ts src/ --fix",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "install": "pnpm i && npm run prepare"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
