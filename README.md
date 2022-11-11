@@ -1,5 +1,5 @@
 ```
-npm run install
+npm run init
 
 npm run serve
 ```
