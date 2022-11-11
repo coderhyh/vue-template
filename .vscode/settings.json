@@ -9,6 +9,7 @@
   "eslint.validate": ["typescript", "vue", "html", "json", "javascript"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "json.format.enable": false,
+  "files.eol": "\n",
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

@@ -10,7 +10,7 @@
     "lint": "eslint --ext .vue --ext .js --ext .ts src/ --fix",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "init": "pnpm i && git init && npm run prepare"
+    "init": "pnpm i && npm run lint && git init && npm run prepare"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
