@@ -1,3 +1,7 @@
+import { App } from 'vue'
+
 export default {
-  install() {}
+  install(app: App) {
+    // app.config.globalProperties
+  }
 }

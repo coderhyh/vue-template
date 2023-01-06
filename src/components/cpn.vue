@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>cpn</div>
 </template>
 
 <script setup lang="ts"></script>

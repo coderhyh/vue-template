@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>cpn-g</div>
 </template>
 
 <script setup lang="ts"></script>
