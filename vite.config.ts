@@ -1,6 +1,6 @@
 import Vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
-// import Unocss from 'unocss/vite'
+import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
@@ -32,10 +32,10 @@ export default defineConfig({
       dts: 'src/components.d.ts',
       dirs: ['src/components-g'], // 按需加载的文件夹
       resolvers: [ElementPlusResolver()]
-    })
+    }),
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
-    // Unocss(),
+    Unocss()
   ],
   resolve: { alias: { '~': resolve(__dirname, 'src') } },
   server: {
@@ -83,7 +83,7 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         charset: false,
-        additionalData: '@import "./src/assets/css/global.less";'
+        additionalData: '@import "~/assets/css/global.less";'
       }
     }
   }
