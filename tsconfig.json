@@ -15,10 +15,10 @@
     "paths": {
       "~/*": ["src/*"]
     },
-    "types": ["element-plus/global", "pinia-plugin-persist"],
+    "types": ["element-plus/global", "pinia-plugin-persist", "vitest/globals"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "references": [{ "path": "./tsconfig.node.json" }],
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "./tests/*"],
   "exclude": ["node_modules"]
 }

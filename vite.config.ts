@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import Vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import Unocss from 'unocss/vite'
@@ -7,9 +9,11 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 
 import AutoImportTypes from './src/plugins/autoImportType'
+import vitestConfig from './vitestConfig'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  test: vitestConfig,
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
