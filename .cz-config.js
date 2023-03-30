@@ -27,7 +27,7 @@ module.exports = {
     ['deps', '项目依赖'],
     ['auth', '对 auth 修改'],
     ['other', '其他修改']
-  ].map(([value, description]) => `${value.padEnd(30)} (${description})`),
+  ].map(([value, description]) => `${value}: ${description}`),
   allowTicketNumber: false,
   isTicketNumberRequired: false,
   ticketNumberPrefix: 'TICKET-',
