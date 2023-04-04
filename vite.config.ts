@@ -7,6 +7,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
+import viteCompression from 'vite-plugin-compression'
 
 import AutoImportTypes from './src/plugins/autoImportType'
 import vitestConfig from './vitestConfig'
@@ -39,7 +40,10 @@ export default defineConfig({
     }),
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
-    Unocss()
+    Unocss(),
+    viteCompression({
+      threshold: 1024000 // 对大于 1mb 的文件进行压缩
+    })
   ],
   resolve: { alias: { '~': resolve(__dirname, 'src') } },
   server: {
