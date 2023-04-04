@@ -1,7 +1,6 @@
-import piniaPluginPersist from 'pinia-plugin-persist'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 const store = createPinia()
-// https://seb-l.github.io/pinia-plugin-persist/
-store.use(piniaPluginPersist)
+store.use(piniaPluginPersistedstate)
 
 export default store

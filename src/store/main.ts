@@ -1,3 +1,9 @@
-export default defineStore('main', () => {
-  return {}
-})
+export default defineStore(
+  'main',
+  () => {
+    return {}
+  },
+  {
+    persist: true
+  }
+)
