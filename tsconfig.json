@@ -15,7 +15,7 @@
     "paths": {
       "~/*": ["src/*"]
     },
-    "types": ["element-plus/global", "vitest/globals"],
+    "types": ["element-plus/global", "vitest/globals", "vite/client"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "references": [{ "path": "./tsconfig.node.json" }],
