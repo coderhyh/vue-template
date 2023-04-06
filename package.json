@@ -9,7 +9,7 @@
     "commit": "git add . && cz",
     "lint": "npm run lint:script && npm run lint:style",
     "lint:script": "eslint --ext .vue,.js,.ts src/ --fix",
-    "lint:style": "stylelint --fix  **/*.{css,less,scss.vue}",
+    "lint:style": "stylelint --fix  **/*.{css,less,scss,vue}",
     "prettier": "prettier --write .",
     "prepare": "husky install",
     "init": "pnpm i && npm run lint && git init && npm run prepare",
