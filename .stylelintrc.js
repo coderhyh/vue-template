@@ -15,6 +15,7 @@ module.exports = {
     'selector-class-pattern': '^([a-z][a-z0-9]*)(-+[a-z0-9]+)*$',
     'declaration-block-trailing-semicolon': null,
     'no-empty-source': null,
+    'string-quotes': null,
     'selector-pseudo-class-no-unknown': [
       true,
       {

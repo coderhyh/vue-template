@@ -7,6 +7,7 @@
     "sdras.vue-vscode-snippets",
     "Vue.vscode-typescript-vue-plugin",
     "antfu.unocss",
-    "ZixuanChen.vitest-explorer"
+    "ZixuanChen.vitest-explorer",
+    "antfu.iconify"
   ]
 }
