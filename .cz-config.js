@@ -24,6 +24,7 @@ module.exports = {
     ['utils', 'utils 相关'],
     ['element-plus', '对 element-plus 的调整'],
     ['style', '样式相关'],
+    ['frame', '框架相关'],
     ['deps', '项目依赖'],
     ['auth', '对 auth 修改'],
     ['other', '其他修改']
