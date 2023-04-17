@@ -1,4 +1,4 @@
-export default defineStore(
+export const main = defineStore(
   'main',
   () => {
     return {}
