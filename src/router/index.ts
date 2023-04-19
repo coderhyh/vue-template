@@ -8,11 +8,11 @@ const router = createRouter({
   routes
 })
 router.beforeEach((to, from, next) => {
-  // NProgress.start()
+  NProgress.start()
   next()
 })
 router.afterEach((to, from) => {
-  // NProgress.done()
+  NProgress.done()
 })
 
 export default router

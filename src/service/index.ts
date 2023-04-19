@@ -1,10 +1,9 @@
 // service统一出口
 import Request from './request'
-import { BASE_URL, TIME_OUT } from './request/config'
 
 const Request1 = new Request({
-  baseURL: BASE_URL,
-  timeout: TIME_OUT,
+  baseURL: import.meta.env.VITE_BASE_URL,
+  timeout: 10000,
   interceptors: {
     requestInterceptor: (config) => {
       // 携带token的拦截

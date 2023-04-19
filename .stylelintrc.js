@@ -13,6 +13,7 @@ module.exports = {
   ],
   rules: {
     'selector-class-pattern': '^([a-z][a-z0-9]*)(-+[a-z0-9]+)*$',
+    'no-duplicate-selectors': null,
     'declaration-block-trailing-semicolon': null,
     'no-empty-source': null,
     'string-quotes': null,

@@ -1,5 +1,5 @@
 declare namespace Types {
-  type AnyObj = {
+  interface IAnyObject {
     [propName: string]: any
   }
 }

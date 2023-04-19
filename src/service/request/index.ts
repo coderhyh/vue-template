@@ -46,9 +46,9 @@ class Request {
         if (err.code !== 'ERR_CANCELED') this.showLoading && NProgress.done()
 
         if (err.response?.status === 404) {
-          console.log('404的错误~')
+          console.log('request 404')
         }
-        return err
+        throw err.response?.data
       }
     )
   }
@@ -71,7 +71,7 @@ class Request {
       }
       return res
     } catch (err: any) {
-      return err
+      return Promise.reject(err)
     }
   }
 
