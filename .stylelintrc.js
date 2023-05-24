@@ -17,6 +17,7 @@ module.exports = {
     'declaration-block-trailing-semicolon': null,
     'no-empty-source': null,
     'string-quotes': null,
+    'block-no-empty': null,
     'selector-pseudo-class-no-unknown': [
       true,
       {
