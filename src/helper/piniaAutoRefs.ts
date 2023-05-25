@@ -12,7 +12,7 @@ type Options = Partial<{
 const defaultOptions: Options = {
   storeDir: 'src/store/src',
   excludes: ['index'],
-  outputFile: 'src/helper/pinia-auto-refs.ts',
+  outputFile: 'src/hooks/useStore.ts',
   pathAlias: '~'
 }
 

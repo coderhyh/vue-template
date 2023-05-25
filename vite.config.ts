@@ -30,7 +30,6 @@ export default defineConfig({
         'vue',
         'pinia',
         'vue-router',
-        { '~/helper/pinia-auto-refs': ['useStore'] },
         {
           '~/hooks': fs
             .readdirSync(resolve(__dirname, './src/hooks'))
