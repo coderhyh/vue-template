@@ -1,7 +1,8 @@
-export const main = defineStore(
+export default defineStore(
   'main',
   () => {
-    return {}
+    const aa = ref(11)
+    return { aa }
   },
   {
     persist: true
