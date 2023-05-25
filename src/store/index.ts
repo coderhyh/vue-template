@@ -5,4 +5,5 @@ store.use(piniaPluginPersistedstate)
 
 export default store
 
-export * from './src/main'
+import main from './src/main'
+export { main }
