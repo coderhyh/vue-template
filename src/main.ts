@@ -1,4 +1,4 @@
-import './assets/css/index.less'
+import './assets/style/index.less'
 import 'element-plus/dist/index.css'
 import 'nprogress/nprogress.css'
 // eslint-disable-next-line import/no-unresolved

@@ -26,18 +26,9 @@ export default defineConfig({
     PiniaAutoRefs(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
-      imports: [
-        'vue',
-        'pinia',
-        'vue-router',
-        {
-          '~/hooks': fs
-            .readdirSync(resolve(__dirname, './src/hooks'))
-            .filter((dir) => dir !== 'index.ts')
-            .map((r) => r.split('.')[0])
-        }
-      ],
+      imports: ['vue', 'pinia', 'vue-router'],
       dts: 'src/auto-imports.d.ts',
+      dirs: ['src/hooks'],
       resolvers: [ElementPlusResolver()],
       eslintrc: {
         enabled: true, // Default `false`
@@ -67,7 +58,6 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true, //自动打开
-    base: './ ', //生产环境路径
     hmr: true,
     host: '0.0.0.0',
     proxy: {
@@ -109,7 +99,7 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         charset: false,
-        additionalData: '@import "~/assets/css/global.less";'
+        additionalData: '@import "~/assets/style/global.less";'
       }
     }
   }

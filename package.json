@@ -18,12 +18,12 @@
   "dependencies": {
     "@vue/runtime-core": "^3.2.45",
     "animate.css": "^4.1.1",
-    "axios": "^1.1.3",
+    "axios": "^1.4.0",
     "element-plus": "^2.2.18",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.23",
     "pinia-plugin-persistedstate": "^3.1.0",
-    "vue": "^3.2.37",
+    "vue": "^3.3.4",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
@@ -34,7 +34,7 @@
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
-    "@vitejs/plugin-vue": "^3.1.0",
+    "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "6",
     "@vue/eslint-config-typescript": "^11.0.2",
     "@vue/test-utils": "2.0.0-rc.18",
@@ -60,9 +60,9 @@
     "terser": "^5.16.0",
     "typescript": "^4.6.4",
     "unocss": "^0.50.6",
-    "unplugin-auto-import": "^0.11.2",
+    "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.22.12",
-    "vite": "^3.1.0",
+    "vite": "^4.4.3",
     "vite-plugin-compression": "^0.5.1",
     "vitest": "^0.29.8",
     "vue-tsc": "^0.40.4"

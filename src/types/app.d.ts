@@ -1,4 +1,4 @@
-declare namespace Types {
+declare namespace App {
   interface IDefaultObject {
     [k: string]: any
   }
