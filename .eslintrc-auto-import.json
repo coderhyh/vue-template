@@ -66,6 +66,17 @@
     "watch": "readonly",
     "watchEffect": "readonly",
     "watchPostEffect": "readonly",
-    "watchSyncEffect": "readonly"
+    "watchSyncEffect": "readonly",
+    "Component": "readonly",
+    "ComponentPublicInstance": "readonly",
+    "ComputedRef": "readonly",
+    "InjectionKey": "readonly",
+    "PropType": "readonly",
+    "Ref": "readonly",
+    "VNode": "readonly",
+    "onBeforeRouteLeave": "readonly",
+    "onBeforeRouteUpdate": "readonly",
+    "toValue": "readonly",
+    "useLink": "readonly"
   }
 }

@@ -16,14 +16,14 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@vue/runtime-core": "^3.2.45",
+    "@vue/runtime-core": "3.3.4",
     "animate.css": "^4.1.1",
     "axios": "^1.4.0",
     "element-plus": "^2.2.18",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.23",
     "pinia-plugin-persistedstate": "^3.1.0",
-    "vue": "^3.3.4",
+    "vue": "3.3.4",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
@@ -61,7 +61,7 @@
     "typescript": "^4.6.4",
     "unocss": "^0.50.6",
     "unplugin-auto-import": "^0.16.6",
-    "unplugin-vue-components": "^0.22.12",
+    "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.3",
     "vite-plugin-compression": "^0.5.1",
     "vitest": "^0.29.8",
