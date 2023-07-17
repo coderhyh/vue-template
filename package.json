@@ -64,6 +64,7 @@
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.3",
     "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-vue-devtools": "^0.5.1",
     "vitest": "^0.29.8",
     "vue-tsc": "^0.40.4"
   },

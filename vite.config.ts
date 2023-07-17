@@ -9,6 +9,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
+import VitePluginVueDevtools from 'vite-plugin-vue-devtools'
 
 import AutoImportTypes from './src/helper/autoImportType'
 import PiniaAutoRefs from './src/helper/piniaAutoRefs'
@@ -52,7 +53,8 @@ export default defineConfig({
       threshold: 10240, //压缩前最小文件大小
       algorithm: 'gzip', //压缩算法
       ext: '.gz' //文件类型
-    })
+    }),
+    VitePluginVueDevtools()
   ],
   resolve: { alias: { '~': resolve(__dirname, 'src') } },
   server: {
