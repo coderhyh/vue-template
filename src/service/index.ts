@@ -9,7 +9,7 @@ const Request1 = new Request({
       // 携带token的拦截
       const token = '123'
       if (token) {
-        config.headers!.Authorization = `Bearer ${token}`
+        config.headers.set('Authorization', `Bearer ${token}`)
       }
       return config
     }

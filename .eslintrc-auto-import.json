@@ -1,5 +1,7 @@
 {
   "globals": {
+    "1": "readonly",
+    "8": "readonly",
     "EffectScope": "readonly",
     "acceptHMRUpdate": "readonly",
     "computed": "readonly",
@@ -77,6 +79,28 @@
     "onBeforeRouteLeave": "readonly",
     "onBeforeRouteUpdate": "readonly",
     "toValue": "readonly",
-    "useLink": "readonly"
+    "useLink": "readonly",
+    "ElMessage": "readonly",
+    "$data": "readonly",
+    "$options": "readonly",
+    "$props": "readonly",
+    "$setup": "readonly",
+    "Object": "readonly",
+    "__VUE_HMR_RUNTIME__": "readonly",
+    "__expose": "readonly",
+    "__props": "readonly",
+    "_cache": "readonly",
+    "_ctx": "readonly",
+    "false": "readonly",
+    "from": "readonly",
+    "if": "readonly",
+    "import": "readonly",
+    "mod": "readonly",
+    "next": "readonly",
+    "return": "readonly",
+    "setup": "readonly",
+    "to": "readonly",
+    "true": "readonly",
+    "updated": "readonly"
   }
 }

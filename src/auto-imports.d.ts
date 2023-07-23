@@ -71,7 +71,7 @@ declare global {
   const useRouter: typeof import('vue-router')['useRouter']
   const useSlots: typeof import('vue')['useSlots']
   const useStore: typeof import('./hooks/useStore')['useStore']
-  const useVModel: typeof import('./hooks/useVModel')['useVModel']
+  const useVModel: typeof import('hyh-toolkit')['useVModel']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']

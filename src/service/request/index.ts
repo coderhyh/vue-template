@@ -1,4 +1,4 @@
-import type { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, Canceler } from 'axios'
+import type { AxiosError, AxiosInstance, AxiosResponse, Canceler, InternalAxiosRequestConfig } from 'axios'
 import axios from 'axios'
 import NProgress from 'nprogress'
 
@@ -27,7 +27,7 @@ class Request {
     )
 
     this.instance.interceptors.request.use(
-      (config: AxiosRequestConfig) => {
+      (config: InternalAxiosRequestConfig) => {
         this.showLoading && NProgress.start()
         return config
       },
@@ -55,7 +55,7 @@ class Request {
 
   async request<T = any>(config: RequestConfig<T>): Promise<T> {
     if (config.interceptors?.requestInterceptor) {
-      config = config.interceptors.requestInterceptor(config)
+      config = config.interceptors.requestInterceptor(<InternalAxiosRequestConfig>config)
     }
     if (config.cancelTokenHook) {
       config.cancelToken = new axios.CancelToken((c: Canceler) => {

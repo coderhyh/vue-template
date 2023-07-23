@@ -1,7 +1,8 @@
 /// <reference types="vitest" />
 
 import Vue from '@vitejs/plugin-vue'
-import fs from 'fs'
+import { HyhToolkitResolve } from 'hyh-toolkit/resolve'
+import { AutoImportType, PiniaAutoRefs } from 'hyh-toolkit/vite-plugin'
 import { resolve } from 'path'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -11,26 +12,24 @@ import { defineConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
 import VitePluginVueDevtools from 'vite-plugin-vue-devtools'
 
-import AutoImportTypes from './src/helper/autoImportType'
-import PiniaAutoRefs from './src/helper/piniaAutoRefs'
-import vitestConfig from './vitestConfig'
+import vitest from './vitest.config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  test: vitestConfig,
+  test: vitest,
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
       reactivityTransform: true
     }),
-    AutoImportTypes({ dtsDir: 'src/types' }),
+    AutoImportType(),
     PiniaAutoRefs(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: ['vue', 'pinia', 'vue-router'],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/hooks'],
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver(), HyhToolkitResolve()],
       eslintrc: {
         enabled: true, // Default `false`
         filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
@@ -84,15 +83,15 @@ export default defineConfig({
       }
     }, // 去除 console debugger
     rollupOptions: {
-      manualChunks(id) {
-        if (id.includes('node_modules')) {
-          return id.toString().split('node_modules/')[1].split('/')[0].toString()
-        }
-      },
       output: {
         chunkFileNames: 'static/js/[name]-[hash].js',
         entryFileNames: 'static/js/[name]-[hash].js',
-        assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
+        assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString()
+          }
+        }
       }
     } // 将打包后的资源分开
   },
