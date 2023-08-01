@@ -47,7 +47,7 @@
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-vue": "^9.6.0",
     "husky": "^8.0.0",
-    "hyh-toolkit": "^0.1.0",
+    "hyh-toolkit": "^0.1.4",
     "less": "^4.1.3",
     "postcss": "^8.4.17",
     "postcss-html": "^1.4.1",

@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 
 import Vue from '@vitejs/plugin-vue'
-import { HyhToolkitResolve } from 'hyh-toolkit/resolve'
+import { HyhToolkitResolvers } from 'hyh-toolkit/resolvers'
 import { AutoImportType, PiniaAutoRefs } from 'hyh-toolkit/vite-plugin'
 import { resolve } from 'path'
 import Unocss from 'unocss/vite'
@@ -29,7 +29,7 @@ export default defineConfig({
       imports: ['vue', 'pinia', 'vue-router'],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/hooks'],
-      resolvers: [ElementPlusResolver(), HyhToolkitResolve()],
+      resolvers: [ElementPlusResolver(), HyhToolkitResolvers()],
       eslintrc: {
         enabled: true, // Default `false`
         filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`

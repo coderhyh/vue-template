@@ -11,7 +11,6 @@ class Request {
   showLoading: boolean
 
   constructor(config: RequestConfig) {
-    // 创建axios实例
     this.instance = axios.create(config)
 
     this.showLoading = config.showLoading ?? DEFAULT_LOADING
