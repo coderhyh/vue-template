@@ -1,8 +1,7 @@
 /// <reference types="vitest" />
 
 import Vue from '@vitejs/plugin-vue'
-import { HyhToolkitResolvers } from 'hyh-toolkit/resolvers'
-import { AutoImportType, PiniaAutoRefs } from 'hyh-toolkit/vite-plugin'
+import { AutoImportType, HyhToolkitResolvers, PiniaAutoRefs } from 'hyh-toolkit/lib/vite'
 import { resolve } from 'path'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -14,7 +13,6 @@ import VitePluginVueDevtools from 'vite-plugin-vue-devtools'
 
 import vitest from './vitest.config'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   test: vitest,
   plugins: [
@@ -24,7 +22,6 @@ export default defineConfig({
     }),
     AutoImportType(),
     PiniaAutoRefs(),
-    // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: ['vue', 'pinia', 'vue-router'],
       dts: 'src/auto-imports.d.ts',
@@ -36,14 +33,11 @@ export default defineConfig({
         globalsPropValue: 'readonly' // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
       }
     }),
-    // https://github.com/antfu/unplugin-vue-components
     Components({
       dts: 'src/components.d.ts',
       dirs: ['src/components', 'src/shared-cpn'], // 按需加载的文件夹
       resolvers: [ElementPlusResolver()]
     }),
-    // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
     Unocss(),
     viteCompression({
       verbose: true, // 默认即可
@@ -58,7 +52,7 @@ export default defineConfig({
   resolve: { alias: { '~': resolve(__dirname, 'src') } },
   server: {
     port: 3000,
-    open: true, //自动打开
+    open: true,
     hmr: true,
     host: '0.0.0.0',
     proxy: {
