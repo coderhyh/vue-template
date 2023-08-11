@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils'
+import { describe, expect, it } from 'vitest'
 
 describe('suite', () => {
   it('test1', async () => {

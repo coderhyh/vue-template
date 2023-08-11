@@ -23,7 +23,7 @@ export default defineConfig({
     AutoImportType(),
     PiniaAutoRefs(),
     AutoImport({
-      imports: ['vue', 'pinia', 'vue-router'],
+      imports: ['vue', 'pinia', 'vue-router', 'vitest'],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/hooks'],
       resolvers: [ElementPlusResolver(), HyhToolkitResolvers()],
