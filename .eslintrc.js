@@ -13,7 +13,8 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     '.eslintrc-auto-import.json',
-    '.eslintrc-auto-import-types.json'
+    '.eslintrc-auto-import-types.json',
+    '@unocss'
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {

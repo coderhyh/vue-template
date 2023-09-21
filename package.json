@@ -35,6 +35,7 @@
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
+    "@unocss/eslint-config": "^0.56.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",
