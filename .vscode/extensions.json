@@ -8,6 +8,7 @@
     "Vue.vscode-typescript-vue-plugin",
     "antfu.unocss",
     "ZixuanChen.vitest-explorer",
-    "antfu.iconify"
+    "antfu.iconify",
+    "EditorConfig.EditorConfig"
   ]
 }
