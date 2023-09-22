@@ -9,12 +9,12 @@ module.exports = {
     '@vue/typescript/recommended',
     '@vue/prettier',
     '@vue/prettier/@typescript-eslint',
+    '@unocss',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     '.eslintrc-auto-import.json',
-    '.eslintrc-auto-import-types.json',
-    '@unocss'
+    '.eslintrc-auto-import-types.json'
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
