@@ -7,6 +7,5 @@
   },
   "stylelint.validate": ["css", "less", "vue", "html"],
   "eslint.validate": ["typescript", "vue", "html", "json", "javascript"],
-  "json.format.enable": false,
-  "files.eol": "\n",
+  "json.format.enable": false
 }

@@ -1,24 +1,26 @@
 module.exports = {
   root: true,
   env: {
+    browser: true,
     node: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
     'eslint:recommended',
-    '@vue/typescript/recommended',
-    '@vue/prettier',
-    '@vue/prettier/@typescript-eslint',
-    '@unocss',
+    'plugin:vue/vue3-essential',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    '@vue/prettier',
+    '@vue/typescript/recommended',
+    '@vue/eslint-config-typescript',
+    '@vue/eslint-config-prettier',
+    '@unocss',
     '.eslintrc-auto-import.json',
     '.eslintrc-auto-import-types.json'
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
-    ecmaVersion: 2021,
+    ecmaVersion: 2023,
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
     ecmaFeatures: {
