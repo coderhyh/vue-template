@@ -8,8 +8,8 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Cpn: typeof import('./components/cpn/src/cpn.vue')['default']
+    Cpn1: typeof import('./shared-cpn/cpn1/src/cpn1.vue')['default']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
-    Placeholder: typeof import('./shared-cpn/placeholder/src/placeholder.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

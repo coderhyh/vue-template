@@ -1,6 +1,8 @@
 <template>
   <div class="index">
-    <h1 w-100px bg-pink text-white>Index</h1>
+    <h1 w-100px text-blue>Index</h1>
+    <Cpn />
+    <Cpn1 />
   </div>
 </template>
 
