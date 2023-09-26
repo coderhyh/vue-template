@@ -35,7 +35,11 @@ export const createConfig = () => {
         autoInstall: true
       })
     ],
-    include: [/\.vue$/, /pages.json?$/],
+    content: {
+      pipeline: {
+        include: [/\.vue$/, /pages.json?$/]
+      }
+    },
     rules: getSizeRules(sizeMapping)
   })
 }

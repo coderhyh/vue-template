@@ -21,7 +21,7 @@ dependencies:
     specifier: ^2.3.14
     version: 2.3.14(vue@3.3.4)
   hyh-toolkit:
-    specifier: ^0.3.3
+    specifier: latest
     version: 0.3.3
   nprogress:
     specifier: ^0.2.0
