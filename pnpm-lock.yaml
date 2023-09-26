@@ -21,8 +21,8 @@ dependencies:
     specifier: ^2.3.14
     version: 2.3.14(vue@3.3.4)
   hyh-toolkit:
-    specifier: latest
-    version: 0.3.3
+    specifier: ^0.3.5
+    version: 0.3.5
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -4678,8 +4678,8 @@ packages:
     hasBin: true
     dev: true
 
-  /hyh-toolkit@0.3.3:
-    resolution: {integrity: sha512-a5krfRJSyyCSZA0dN0fl11vlVK4N8PxuhKyW5DbvanJQUwOqlgT0KJ08sJiSKBa4o8+RLf+yqdIgapnHbDMccQ==}
+  /hyh-toolkit@0.3.5:
+    resolution: {integrity: sha512-s5LUZCHfecOTgWTPy+Qo96sRqXarqsPifZH2mTWHWgCNcSoCDmw1x5XVhJeqKuNdq/wRQi/JFTIHjrvrYKbPgg==}
     engines: {node: '>=16.0.0'}
     dependencies:
       chokidar: 3.5.3
