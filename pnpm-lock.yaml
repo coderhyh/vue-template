@@ -101,8 +101,8 @@ devDependencies:
     specifier: ^8.0.3
     version: 8.0.3
   hyh-toolkit:
-    specifier: ^0.3.6
-    version: 0.3.6
+    specifier: ^0.3.7
+    version: 0.3.7
   less:
     specifier: ^4.2.0
     version: 4.2.0
@@ -4685,8 +4685,8 @@ packages:
     hasBin: true
     dev: true
 
-  /hyh-toolkit@0.3.6:
-    resolution: {integrity: sha512-xZlekkw8kvSOqspZIJhUtDS0G7H17FlahrLR17IWLQa10mrO/xy4cfe8/DfvR9TMndtKMb09qMmK/SCgv579fg==}
+  /hyh-toolkit@0.3.7:
+    resolution: {integrity: sha512-WPuMc9XS6kIUXqgm6+U2bVyi7DvpjVLF9A7xyEZZpnwYRcmkSKd9pbWbTaRdZVVz/Zmn1HR5/xvwbat46VfV7w==}
     engines: {node: '>=16.0.0'}
     dependencies:
       chokidar: 3.5.3
