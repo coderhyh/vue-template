@@ -1,13 +1,13 @@
 import type { ToRef } from 'vue'
 
-import mainStore from '~/store/src/main'
+import appStore from '~/store/src/app'
 
 type AutoToRefs<T> = {
   [K in keyof T]: T[K] extends Function ? T[K] : ToRef<T[K]>
 }
 
 const storeExports = {
-  main: mainStore
+  app: appStore
 }
 
 export function useStore<T extends keyof typeof storeExports>(storeName: T) {

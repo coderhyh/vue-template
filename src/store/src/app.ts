@@ -1,5 +1,5 @@
 export default defineStore(
-  'main',
+  'app',
   () => {
     return {}
   },
