@@ -12,10 +12,10 @@ import { defineConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
 import VitePluginVueDevtools from 'vite-plugin-vue-devtools'
 
-import vitest from './vitest.config'
+import Vitest from './vitest.config'
 
 export default defineConfig({
-  test: vitest,
+  test: Vitest,
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
@@ -28,7 +28,7 @@ export default defineConfig({
       componentDirs: ['cpns']
     }),
     AutoImport({
-      imports: ['vue', 'pinia', 'vue-router', 'vitest', '@vueuse/core'],
+      imports: ['vue', 'pinia', 'vue-router', '@vueuse/core'],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/hooks', 'src/utils'],
       resolvers: [ElementPlusResolver()],
