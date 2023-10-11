@@ -24,8 +24,7 @@ export default defineConfig({
     AutoImportType(),
     PiniaAutoRefs(),
     AutoExport({
-      path: ['~/views/**/{cpns,hooks,config}/*'],
-      componentDirs: ['cpns']
+      path: ['~/views/**/{cpns,hooks,config}/*']
     }),
     AutoImport({
       imports: ['vue', 'pinia', 'vue-router', '@vueuse/core'],
