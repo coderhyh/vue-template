@@ -1,3 +1,7 @@
-import Index from './src/index.vue'
+/* eslint-disable simple-import-sort/exports */
+export { default } from './src/index.vue'
 
-export default Index
+export * from './src/config'
+export * from './src/cpns'
+export * from './src/hooks'
+export type * from './src/types'
