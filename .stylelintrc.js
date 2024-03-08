@@ -1,29 +1,21 @@
 module.exports = {
   extends: ['stylelint-config-standard'],
-  plugins: ['stylelint-order', 'stylelint-less'],
   overrides: [
     {
+      customSyntax: 'postcss-less',
       files: ['**/*.less'],
-      customSyntax: 'postcss-less'
     },
     {
+      customSyntax: 'postcss-html',
       files: ['*.html', '**/*.{html,vue}'],
-      customSyntax: 'postcss-html'
-    }
+    },
   ],
+  plugins: ['stylelint-order', 'stylelint-less'],
   rules: {
-    'selector-class-pattern': '^([A-z][A-z0-9]*)(-+[A-z0-9]+)*$',
-    'no-duplicate-selectors': null,
-    'declaration-block-trailing-semicolon': null,
-    'no-empty-source': null,
-    'string-quotes': null,
     'block-no-empty': null,
-    'selector-pseudo-class-no-unknown': [
-      true,
-      {
-        ignorePseudoClasses: ['deep']
-      }
-    ],
+    'declaration-block-trailing-semicolon': null,
+    'no-duplicate-selectors': null,
+    'no-empty-source': null,
     'order/properties-order': [
       'box-sizing',
       'overflow-scrolling',
@@ -283,7 +275,15 @@ module.exports = {
       // Webkit专有属性
       '-webkit-overflow-scrolling',
       '-webkit-text-fill-color',
-      '-webkit-tap-highlight-color'
-    ]
-  }
+      '-webkit-tap-highlight-color',
+    ],
+    'selector-class-pattern': '^([A-z][A-z0-9]*)(-+[A-z0-9]+)*$',
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: ['deep'],
+      },
+    ],
+    'string-quotes': null,
+  },
 }

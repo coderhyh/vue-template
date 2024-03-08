@@ -1,23 +1,23 @@
-import { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 
 export const routes: RouteRecordRaw[] = [
   {
-    path: '/',
-    redirect: '/',
-    name: 'Layout',
-    component: () => import('~/layout/layout.vue'),
     children: [
       {
-        path: '/',
-        name: 'Index',
         component: () => import('~/views/index'),
-        meta: {}
-      }
-    ]
+        meta: {},
+        name: 'Index',
+        path: '/',
+      },
+    ],
+    component: () => import('~/layout/layout.vue'),
+    name: 'Layout',
+    path: '/',
+    redirect: '/',
   },
   {
-    path: '/:pathMatch(.*)*',
+    component: () => import('~/views/notFound/notFound.vue'),
     name: 'NotFound',
-    component: () => import('~/views/notFound/notFound.vue')
-  }
+    path: '/:pathMatch(.*)*',
+  },
 ]

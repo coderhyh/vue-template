@@ -1,9 +1,10 @@
 import { debounce } from './debounce'
 
-export function throttle(fn: Function, options?: { delay?: number; immediate?: boolean }) {
+export function throttle(fn: Function, options?: { delay?: number, immediate?: boolean }) {
   const { delay = 1000, immediate = false } = options ?? {}
   let timer: NodeJS.Timeout | undefined
   let isInvoke = false
+  const resetInvoke = debounce(() => (isInvoke = false), { delay })
 
   function _throttle(...rest: any[]) {
     return new Promise((resolve, reject) => {
@@ -11,8 +12,10 @@ export function throttle(fn: Function, options?: { delay?: number; immediate?: b
       if (immediate && !isInvoke) {
         execFunctionWithCatchError()
         isInvoke = true
-      } else {
-        if (timer) return
+      }
+      else {
+        if (timer)
+          return
         timer = setTimeout(() => {
           execFunctionWithCatchError()
           timer = undefined
@@ -21,13 +24,14 @@ export function throttle(fn: Function, options?: { delay?: number; immediate?: b
       function execFunctionWithCatchError(this: any) {
         try {
           resolve(fn.apply(this, rest))
-        } catch (error) {
+        }
+        catch (error) {
           reject(error)
         }
       }
     })
   }
-  const resetInvoke = debounce(() => (isInvoke = false), { delay })
+
   _throttle.cancel = () => (clearTimeout(timer), (timer = undefined))
   return _throttle
 }

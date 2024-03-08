@@ -1,4 +1,3 @@
-/* eslint-disable simple-import-sort/exports */
 export { default } from './src/index.vue'
 
 export * from './src/config'

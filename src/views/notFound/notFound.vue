@@ -1,5 +1,7 @@
 <template>
-  <div class="NotFond">404</div>
+  <div class="NotFond">
+    404
+  </div>
 </template>
 
 <script lang="ts" setup></script>

@@ -3,7 +3,7 @@ module.exports = {
   rules: {
     // 'subject-case': [0, 'never'],
     'type-enum': [
-      2, //代表必须输入
+      2, // 代表必须输入
       'always',
       [
         'feat', // 一个新的特性
@@ -18,8 +18,8 @@ module.exports = {
         'merge', // 仅进行分支合并
         'style', // 代码样式修改
         'revert', // 回滚到上一个版本
-        'perf' // 改善性能
-      ]
-    ]
-  }
+        'perf', // 改善性能
+      ],
+    ],
+  },
 }

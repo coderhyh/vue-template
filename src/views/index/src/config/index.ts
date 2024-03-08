@@ -1,1 +1,1 @@
-export {}
+export const bbb = 2

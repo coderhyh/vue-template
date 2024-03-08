@@ -1,6 +1,6 @@
-import type { AxiosError, AxiosInstance, AxiosResponse, Canceler, InternalAxiosRequestConfig } from 'axios'
 import axios from 'axios'
 import NProgress from 'nprogress'
+import type { AxiosError, AxiosInstance, AxiosResponse, Canceler, InternalAxiosRequestConfig } from 'axios'
 
 import type { RequestConfig, RequestInterceptors } from './type'
 
@@ -18,11 +18,11 @@ class Request {
 
     this.instance.interceptors.request.use(
       this.interceptors?.requestInterceptor,
-      this.interceptors?.requestInterceptorCatch
+      this.interceptors?.requestInterceptorCatch,
     )
     this.instance.interceptors.response.use(
       this.interceptors?.responseInterceptor,
-      this.interceptors?.responseInterceptorCatch
+      this.interceptors?.responseInterceptorCatch,
     )
 
     this.instance.interceptors.request.use(
@@ -32,7 +32,7 @@ class Request {
       },
       (err: AxiosError) => {
         return err
-      }
+      },
     )
 
     this.instance.interceptors.response.use(
@@ -42,20 +42,21 @@ class Request {
         return data
       },
       (err: AxiosError) => {
-        if (err.code !== 'ERR_CANCELED') this.showLoading && NProgress.done()
+        if (err.code !== 'ERR_CANCELED')
+          this.showLoading && NProgress.done()
 
-        if (err.response?.status === 404) {
+        if (err.response?.status === 404)
           console.log('request 404')
-        }
+
         throw err.response?.data
-      }
+      },
     )
   }
 
   async request<T = any>(config: RequestConfig<T>): Promise<T> {
-    if (config.interceptors?.requestInterceptor) {
+    if (config.interceptors?.requestInterceptor)
       config = config.interceptors.requestInterceptor(<InternalAxiosRequestConfig>config)
-    }
+
     if (config.cancelTokenHook) {
       config.cancelToken = new axios.CancelToken((c: Canceler) => {
         config.cancelTokenHook?.(c)
@@ -65,11 +66,12 @@ class Request {
 
     try {
       let res: T = await this.instance.request<any, T>(config)
-      if (config.interceptors?.responseInterceptor) {
+      if (config.interceptors?.responseInterceptor)
         res = config.interceptors.responseInterceptor(res)
-      }
+
       return res
-    } catch (err: any) {
+    }
+    catch (err: any) {
       return Promise.reject(err)
     }
   }

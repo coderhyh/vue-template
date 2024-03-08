@@ -1,9 +1,9 @@
 export default defineStore(
   'app',
   () => {
-    return {}
+    return { a: 1 }
   },
   {
-    persist: true
-  }
+    persist: true,
+  },
 )

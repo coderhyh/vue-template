@@ -1,14 +1,17 @@
 {
   "name": "vue-template",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=16.17.1"
+  },
   "scripts": {
     "serve": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "commit": "git add . && cz",
-    "lint": "npm run lint:script && npm run lint:style",
-    "lint:script": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "lint": "npm run lint:fix && npm run lint:style",
+    "lint:fix": "eslint . --fix",
     "lint:style": "stylelint \"./src/**/*.{css,less,vue,html}\" --fix",
     "prettier": "prettier --write .",
     "prepare": "husky install",
@@ -28,26 +31,19 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.8.0",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@iconify/json": "^2.2.119",
     "@types/node": "^18.17.18",
     "@types/nprogress": "^0.2.0",
-    "@typescript-eslint/eslint-plugin": "^6.7.2",
-    "@typescript-eslint/parser": "^6.7.2",
-    "@unocss/eslint-config": "^0.56.1",
+    "@unocss/eslint-plugin": "^0.58.5",
     "@vitejs/plugin-vue": "^4.3.4",
-    "@vue/eslint-config-prettier": "^8.0.0",
-    "@vue/eslint-config-typescript": "^12.0.0",
     "@vue/test-utils": "2.4.1",
     "commitizen": "4.3.0",
     "cz-customizable": "7.0.0",
-    "eslint": "^8.49.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-vue": "^9.17.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-format": "^0.1.0",
     "husky": "^8.0.3",
     "hyh-toolkit": "^0.3.9",
     "less": "^4.2.0",
@@ -55,7 +51,6 @@
     "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
     "postcss-preset-env": "^9.1.4",
-    "prettier": "^3.0.3",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-less": "^2.0.0",
@@ -71,8 +66,5 @@
     "vite-plugin-vue-devtools": "1.0.0-rc.5",
     "vitest": "^0.34.5",
     "vue-tsc": "^1.8.13"
-  },
-  "engines": {
-    "node": ">=16.17.1"
   }
 }

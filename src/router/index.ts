@@ -1,11 +1,10 @@
 import NProgress from 'nprogress'
 import { createRouter, createWebHistory } from 'vue-router'
-
 import { routes } from './routes'
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 })
 router.beforeEach((to, from, next) => {
   NProgress.start()

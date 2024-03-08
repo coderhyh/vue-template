@@ -13,7 +13,7 @@ type PartialRef<T extends Record<string, any>> = {
 }
 
 const storeExports = {
-  app: appStore
+  app: appStore,
 }
 
 export function useStore<T extends keyof typeof storeExports>(storeName: T) {

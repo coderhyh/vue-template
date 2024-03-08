@@ -1,46 +1,48 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno, Rule } from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
+import type { Rule } from 'unocss'
+
 // https://github.com/unocss/unocss
 
 const sizeMapping: Record<string, string> = {
+  br: 'border-radius',
+  fs: 'font-size',
   h: 'height',
-  w: 'width',
   m: 'margin',
-  p: 'padding',
-  mt: 'margin-top',
-  mr: 'margin-right',
   mb: 'margin-bottom',
   ml: 'margin-left',
-  pt: 'padding-top',
-  pr: 'padding-right',
+  mr: 'margin-right',
+  mt: 'margin-top',
+  p: 'padding',
   pb: 'padding-bottom',
   pl: 'padding-left',
-  fs: 'font-size',
-  br: 'border-radius'
+  pr: 'padding-right',
+  pt: 'padding-top',
+  w: 'width',
 }
 
-function getSizeRules(Mapping: Record<string, string>): Rule<{}>[] {
+function getSizeRules(Mapping: Record<string, string>): Rule<object>[] {
   return Object.keys(Mapping).map((key) => {
     const value = Mapping[key]
     return [new RegExp(`^${key}(\\d+)$`), ([, d]) => ({ [value]: `${d}px` })]
   })
 }
 
-export const createConfig = () => {
+export function createConfig() {
   return defineConfig({
+    content: {
+      pipeline: {
+        include: [/\.vue$/, /pages.json?$/],
+      },
+    },
     presets: [
       presetUno(),
       presetAttributify(),
       presetIcons({
+        autoInstall: true,
         prefix: '',
-        autoInstall: true
-      })
+      }),
     ],
-    content: {
-      pipeline: {
-        include: [/\.vue$/, /pages.json?$/]
-      }
-    },
-    rules: getSizeRules(sizeMapping)
+    rules: getSizeRules(sizeMapping),
   })
 }
 
