@@ -5,8 +5,8 @@
     "dbaeumer.vscode-eslint",
     "sdras.vue-vscode-snippets",
     "antfu.unocss",
-    "ZixuanChen.vitest-explorer",
     "antfu.iconify",
+    "vitest.explorer",
     "EditorConfig.EditorConfig"
   ]
 }
