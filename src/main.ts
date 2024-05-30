@@ -2,7 +2,7 @@ import 'nprogress/nprogress.css'
 import './assets/style/index.less'
 
 import 'animate.css'
-import 'uno.css'
+import 'virtual:uno.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'

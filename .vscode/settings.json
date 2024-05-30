@@ -1,6 +1,6 @@
 {
-  "editor.tabSize": 2,
   // Enable the ESlint flat config support
+  // (remove this if your ESLint extension above v3.0.5)
   "eslint.experimental.useFlatConfig": true,
 
   // Disable the default formatter, use eslint instead
@@ -10,8 +10,7 @@
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "explicit",
-    "source.fixAll.stylelint": "explicit"
+    "source.organizeImports": "never"
   },
 
   // Silent the stylistic rules in you IDE, but still auto fix them
@@ -40,7 +39,15 @@
     "json",
     "jsonc",
     "yaml",
-    "toml"
-  ],
-  "stylelint.validate": ["css", "less", "vue", "html"]
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+  ]
 }

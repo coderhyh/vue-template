@@ -20,7 +20,7 @@ export function useStore<T extends keyof typeof storeExports>(storeName: T) {
   const store = storeExports[storeName]()
   const storeRefs = storeToRefs(store)
   return { ...store, ...storeRefs } as (
-    T extends any ? (x: AutoToRefs<ReturnType<(typeof storeExports)[T]>>) => void : never
+    T extends any ? (x: AutoToRefs<ReturnType<typeof storeExports[T]>>) => void : never
   ) extends (x: infer R) => void
     ? IsUnion<T> extends true
       ? R extends Record<string, any>

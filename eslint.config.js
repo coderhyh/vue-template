@@ -1,6 +1,6 @@
-const antfu = require('@antfu/eslint-config')
+import antfu from '@antfu/eslint-config'
 
-module.exports = antfu.default(
+export default antfu(
   {
     formatters: true,
     ignores: ['**/node_modules/**', '**/dist/**'],
@@ -13,7 +13,7 @@ module.exports = antfu.default(
       'no-sequences': 'off',
       'perfectionist/sort-objects': 'error',
       'unused-imports/no-unused-vars': 'off',
-      'vue/attributes-order': 'warn',
+      'vue/attributes-order': 'error',
       'vue/block-order': ['error', {
         order: ['template', 'script', 'style'],
       }],

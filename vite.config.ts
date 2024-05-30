@@ -2,7 +2,7 @@
 
 import { resolve } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
-import { AutoImportType, PiniaAutoRefs } from 'hyh-toolkit/lib/vite'
+import { PiniaAutoRefs } from 'hyh-toolkit/vite'
 import Unocss from 'unocss/vite'
 import AutoExport from 'unplugin-auto-export/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -52,9 +52,7 @@ export default defineConfig({
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
-      reactivityTransform: true,
     }),
-    AutoImportType(),
     PiniaAutoRefs(),
     AutoExport({
       path: ['~/views/**/{cpns,hooks,config}/*'],

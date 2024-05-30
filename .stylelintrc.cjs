@@ -14,6 +14,7 @@ module.exports = {
   rules: {
     'block-no-empty': null,
     'declaration-block-trailing-semicolon': null,
+    'function-no-unknown': null,
     'no-duplicate-selectors': null,
     'no-empty-source': null,
     'order/properties-order': [

@@ -1,5 +1,5 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 import type { Rule } from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, presetTagify, presetUno, transformerDirectives } from 'unocss'
 
 // https://github.com/unocss/unocss
 
@@ -27,23 +27,25 @@ function getSizeRules(Mapping: Record<string, string>): Rule<object>[] {
   })
 }
 
-export function createConfig() {
-  return defineConfig({
-    content: {
-      pipeline: {
-        include: [/\.vue$/, /pages.json?$/],
-      },
+export default defineConfig({
+  content: {
+    pipeline: {
+      include: [/\.vue$/, /pages.json?$/],
     },
-    presets: [
-      presetUno(),
-      presetAttributify(),
-      presetIcons({
-        autoInstall: true,
-        prefix: '',
-      }),
-    ],
-    rules: getSizeRules(sizeMapping),
-  })
-}
-
-export default createConfig()
+  },
+  presets: [
+    presetUno(),
+    presetAttributify(),
+    presetIcons({
+      autoInstall: true,
+      prefix: 'i-',
+    }),
+    presetTagify({
+      prefix: 'un-',
+    }),
+  ],
+  rules: getSizeRules(sizeMapping),
+  transformers: [
+    transformerDirectives(),
+  ],
+})
