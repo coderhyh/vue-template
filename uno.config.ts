@@ -1,5 +1,14 @@
 import type { Rule } from 'unocss'
-import { defineConfig, presetAttributify, presetIcons, presetTagify, presetUno, transformerDirectives } from 'unocss'
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetTagify,
+  presetUno,
+  transformerCompileClass,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
 
 // https://github.com/unocss/unocss
 
@@ -41,11 +50,14 @@ export default defineConfig({
       prefix: 'i-',
     }),
     presetTagify({
+      extraProperties: { display: 'block' },
       prefix: 'un-',
     }),
   ],
   rules: getSizeRules(sizeMapping),
   transformers: [
     transformerDirectives(),
+    transformerCompileClass(),
+    transformerVariantGroup(),
   ],
 })
