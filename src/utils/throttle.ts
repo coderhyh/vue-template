@@ -1,6 +1,6 @@
 import { debounce } from './debounce'
 
-export function throttle(fn: Function, options?: { delay?: number, immediate?: boolean }) {
+export function throttle(fn: (...args: any[]) => any, options?: { delay?: number, immediate?: boolean }) {
   const { delay = 1000, immediate = false } = options ?? {}
   let timer: NodeJS.Timeout | undefined
   let isInvoke = false

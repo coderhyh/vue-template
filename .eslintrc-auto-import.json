@@ -296,6 +296,20 @@
     "watchThrottled": "readonly",
     "watchTriggerable": "readonly",
     "watchWithFilter": "readonly",
-    "whenever": "readonly"
+    "whenever": "readonly",
+    "DirectiveBinding": "readonly",
+    "ExtractDefaultPropTypes": "readonly",
+    "ExtractPropTypes": "readonly",
+    "ExtractPublicPropTypes": "readonly",
+    "MaybeRef": "readonly",
+    "MaybeRefOrGetter": "readonly",
+    "WritableComputedRef": "readonly",
+    "injectLocal": "readonly",
+    "onWatcherCleanup": "readonly",
+    "provideLocal": "readonly",
+    "useClipboardItems": "readonly",
+    "useId": "readonly",
+    "useModel": "readonly",
+    "useTemplateRef": "readonly"
   }
 }

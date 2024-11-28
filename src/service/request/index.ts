@@ -1,8 +1,8 @@
+import type { AxiosError, AxiosInstance, AxiosResponse, Canceler, InternalAxiosRequestConfig } from 'axios'
+import type { RequestConfig, RequestInterceptors } from './type'
+
 import axios from 'axios'
 import NProgress from 'nprogress'
-import type { AxiosError, AxiosInstance, AxiosResponse, Canceler, InternalAxiosRequestConfig } from 'axios'
-
-import type { RequestConfig, RequestInterceptors } from './type'
 
 const DEFAULT_LOADING = false
 class Request {
