@@ -51,7 +51,7 @@
     "eslint": "^9.15.0",
     "eslint-plugin-format": "^0.1.2",
     "husky": "^8.0.3",
-    "hyh-toolkit": "^0.4.0",
+    "hyh-toolkit": "^0.4.1",
     "less": "^4.2.0",
     "postcss": "^8.4.30",
     "postcss-html": "^1.5.0",
