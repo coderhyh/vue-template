@@ -8,7 +8,7 @@
 
 - 📦 [组件自动化加载](https://github.com/antfu/unplugin-vue-components)
 
-- 🧲 使用[Eslint](https://eslint.org/), [Prettier](https://github.com/prettier/prettier), [Stylelint](https://stylelint.io/)约束代码
+- 🧲 使用[![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config), [Stylelint](https://stylelint.io/)约束代码
 
 - 🍍 [使用 Pinia 的状态管理](https://pinia.vuejs.org), 以及[Pinia 持久化](https://prazdevs.github.io/pinia-plugin-persistedstate/)
 
@@ -22,11 +22,7 @@
 
 - 🦾 [TypeScript](https://github.com/microsoft/TypeScript)
 
-- ⛓️ 使用[commitizen](https://github.com/commitizen-tools/commitizen), [husky](https://github.com/typicode/husky), [cz-customizable](https://github.com/leoforfree/cz-customizable)定制 git
-
 - 🪜 集成[element-plus](https://element-plus.org/)
-
-- ⚙️ 使用 [Vitest](https://github.com/vitest-dev/vitest) 进行单元测试
 
 ## 开发工具
 
@@ -34,11 +30,8 @@
   - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Vue 3 `<script setup>` IDE 支持
   - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - 图标内联显示和自动补全
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-  - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
   - [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)
   - [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
-  - [Vitest](https://marketplace.visualstudio.com/items?itemName=ZixuanChen.vitest-explorer)
   - [UnoCSS](https://marketplace.visualstudio.com/items?itemName=antfu.unocss)
 
 ## 使用

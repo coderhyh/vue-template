@@ -1,6 +1,6 @@
 export function debounce(fn: (...args: any[]) => any, options?: { delay?: number, immediate?: boolean }) {
   const { delay = 1000, immediate = false } = options ?? {}
-  let timer: NodeJS.Timeout | undefined
+  let timer: number | undefined
   let isInvoke = false
 
   const _debounce = function (...rest: any[]) {

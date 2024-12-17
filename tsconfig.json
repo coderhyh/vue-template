@@ -11,7 +11,7 @@
       "~/*": ["src/*"]
     },
     "resolveJsonModule": true,
-    "types": ["element-plus/global", "vitest/importMeta", "vitest/globals", "vite/client"],
+    "types": ["element-plus/global", "vite/client"],
     "allowJs": true,
     "strict": true,
     "strictNullChecks": true,

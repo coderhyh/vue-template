@@ -10,19 +10,10 @@
     "serve": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "commit": "git add . && cz",
-    "lint": "npm run lint:fix && npm run lint:style",
+    "lint": "pnpm lint:fix && pnpm lint:style",
     "lint:fix": "eslint . --fix",
     "lint:style": "stylelint \"./src/**/*.{css,less,vue,html}\" --fix",
-    "prettier": "prettier --write .",
-    "prepare": "husky install",
-    "init": "pnpm i && git init && npm run prepare",
-    "test": "vitest"
-  },
-  "config": {
-    "cz-customizable": {
-      "config": ".cz-config.cjs"
-    }
+    "init": "pnpm i && git init && npx simple-git-hooks"
   },
   "dependencies": {
     "@vue/runtime-core": "^3.5.13",
@@ -38,25 +29,22 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
     "@iconify/json": "^2.2.215",
     "@types/node": "^18.17.18",
     "@types/nprogress": "^0.2.0",
     "@unocss/eslint-plugin": "^0.64.1",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/test-utils": "2.4.1",
-    "commitizen": "4.3.0",
-    "cz-customizable": "7.0.0",
     "eslint": "^9.15.0",
-    "eslint-plugin-format": "^0.1.2",
-    "husky": "^8.0.3",
+    "eslint-plugin-format": "^0.1.3",
     "hyh-toolkit": "^0.4.1",
     "less": "^4.2.0",
+    "lint-staged": "^15.2.11",
     "postcss": "^8.4.30",
     "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
     "postcss-preset-env": "^9.1.4",
+    "simple-git-hooks": "^2.11.1",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-less": "^2.0.0",
@@ -70,7 +58,12 @@
     "vite": "^5.4.11",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-vue-devtools": "^7.6.5",
-    "vitest": "^2.1.6",
     "vue-tsc": "^2.1.10"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "pnpm lint"
   }
 }

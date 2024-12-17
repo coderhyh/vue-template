@@ -1,5 +1,3 @@
-/// <reference types="vitest" />
-
 import { resolve } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
 import { PiniaAutoRefs } from 'hyh-toolkit/vite'
@@ -11,7 +9,6 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
 import VitePluginVueDevtools from 'vite-plugin-vue-devtools'
-import Vitest from './vitest.config'
 
 export default defineConfig({
   build: {
@@ -100,5 +97,4 @@ export default defineConfig({
       },
     },
   },
-  test: Vitest,
 })
