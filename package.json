@@ -10,8 +10,8 @@
     "serve": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "pnpm lint:fix && pnpm lint:style",
-    "lint:fix": "eslint . --fix",
+    "lint": "pnpm lint:script && pnpm lint:style",
+    "lint:script": "eslint . --fix",
     "lint:style": "stylelint \"./src/**/*.{css,less,vue,html}\" --fix",
     "init": "pnpm i && git init && npx simple-git-hooks"
   },
@@ -64,6 +64,7 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "pnpm lint"
+    "*.{vue,js,ts,jsx,tsx}": "pnpm lint:script",
+    "*.{css,less,vue,html}": "pnpm lint:style"
   }
 }
