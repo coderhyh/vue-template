@@ -13,6 +13,7 @@ module.exports = {
   plugins: ['stylelint-order', 'stylelint-less'],
   rules: {
     'block-no-empty': null,
+    'no-descending-specificity': null,
     'declaration-block-trailing-semicolon': null,
     'function-no-unknown': null,
     'no-duplicate-selectors': null,

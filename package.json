@@ -13,7 +13,7 @@
     "lint": "pnpm lint:script && pnpm lint:style",
     "lint:script": "eslint . --fix",
     "lint:style": "stylelint \"./src/**/*.{css,less,vue,html}\" --fix",
-    "init": "pnpm i && git init && npx simple-git-hooks"
+    "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
     "@vue/runtime-core": "^3.5.13",
@@ -50,7 +50,7 @@
     "stylelint-less": "^2.0.0",
     "stylelint-order": "^6.0.3",
     "terser": "^5.20.0",
-    "typescript": "^5.7.2",
+    "typescript": "^5.8.2",
     "unocss": "^0.64.1",
     "unplugin-auto-export": "^1.0.1",
     "unplugin-auto-import": "^0.18.6",
@@ -58,7 +58,7 @@
     "vite": "^5.4.11",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-vue-devtools": "^7.6.5",
-    "vue-tsc": "^2.1.10"
+    "vue-tsc": "^2.2.8"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

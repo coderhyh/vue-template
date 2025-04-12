@@ -1,4 +1,3 @@
-// service统一出口
 import Request from './request'
 
 const Request1 = new Request({
