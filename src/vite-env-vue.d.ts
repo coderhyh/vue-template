@@ -10,5 +10,10 @@ declare module '*.vue' {
 declare module 'vue' {
   export interface ComponentCustomProperties {
     // $Bus: string
+    vPermissions: string
+  }
+
+  export interface GlobalDirectives {
+    vToggle: string
   }
 }

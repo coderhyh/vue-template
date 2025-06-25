@@ -14,7 +14,7 @@ import {
 export default defineConfig({
   content: {
     pipeline: {
-      include: [/\.vue$/, /pages.json?$/],
+      include: [/\.vue$/],
     },
   },
   presets: [

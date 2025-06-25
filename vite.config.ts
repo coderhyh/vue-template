@@ -66,7 +66,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
     Components({
-      dirs: ['src/components', 'src/shared-cpn'],
+      globs: ['src/components/*/index.ts', 'src/shared-cpn/*/index.ts'],
       dts: 'src/components.d.ts',
       resolvers: [ElementPlusResolver()],
     }),
